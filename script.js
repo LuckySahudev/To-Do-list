@@ -6,11 +6,12 @@ let addlist = document.getElementById("addlist")
 let submit = document.getElementById("submit")
 let listitems = document.getElementById("listitems")
 
-
+// open window function open input window
 function openWindow() {
     changecss();
 }
 
+//close window function to close input window 
 function closeWindow() {
   const input = document.getElementById("Input");
   const text = input.value.trim();
@@ -21,7 +22,7 @@ function closeWindow() {
         return;
   }
 
-    // ✅ EDIT MODE
+  //  EDIT MODE
   if (editingLabel) {
 
         editingLabel.textContent = " " + text;
@@ -30,17 +31,18 @@ function closeWindow() {
         addlist.style.display = "none";
         return;
   }
-
+  
+  // create input checkbox
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.className = "task";
 
+  // creat a label for that created checkbox
   const label = document.createElement("label");
   label.textContent = " "+text;
 
 
   // add a edit button
-
   const edits = document.createElement("button");
   edits.className = "edits";
 
@@ -51,7 +53,8 @@ function closeWindow() {
   imageOfEdit.width = 10;
   imageOfEdit.height = 10;
   imageOfEdit.alt = "Edit";
-
+  
+  // append image of edit to the edit icon
   edits.appendChild(imageOfEdit);
 
   
@@ -67,9 +70,10 @@ function closeWindow() {
   deletes.height = 10;
   deletes.alt = "delete";
 
+  // append delete image to delete icon
   deleting.appendChild(deletes);
 
-  // making a action div 
+  // making a action div for edit and delete icon
   const action = document.createElement("div")
   action.className = "action"
   action.appendChild(edits);
@@ -81,21 +85,23 @@ function closeWindow() {
   sitem.appendChild(checkbox); 
   sitem.appendChild(label); 
 
-  // appending on all instancess 
+  // appending on all instancess on a new div
   const item = document.createElement("div");
   item.className = "item";
   item.appendChild(sitem); 
   item.appendChild(action);
   
-
+  // appending new div to the listitems container to show task
   listitems.appendChild(item);
   Input.value = "";
   listitems.scrollTop = listitems.scrollHeight;
-
+  
+  // displaying none to the input window 
   document.getElementById("addlist").style.display = "none";
   return;
 }
 
+// Funtion for change the input window display 
 function changecss(){
     document.getElementById("addlist").style.display = "block";
     addlist.style.background = "rgb(195, 195, 195)";
@@ -111,6 +117,7 @@ function changecss(){
     addlist.style.borderRadius = "3px";
 }
 
+// Adding a event listener for + button 
 add.addEventListener("click",function(){
     add.style.background = "grey";
     add.style.height = "35px"
@@ -129,7 +136,6 @@ add.addEventListener("mouseleave",function(){
 })
 
 // working machanism of delete buttun 
-
 addEventListener('click',function(e){
     if(e.target.classList.contains('delete') || e.target.classList.contains('d-image')){
         var item = e.target.closest('.item')
@@ -138,9 +144,6 @@ addEventListener('click',function(e){
 });
 
 // working machanism of edit button 
-
-// ( what i want . i want when i click the delete button so open that window again which is open when we create a new task but now when we click the submit button they work like edit )
-
 addEventListener('click', function (e) {
     const target = e.target.closest('.edits, .e-image');
     if (!target) return;
@@ -156,9 +159,7 @@ addEventListener('click', function (e) {
     document.getElementById("Input").value = label.textContent.trim();
 });
 
-
- 
-
+// If Checked then disipear the task 
 addEventListener("click",function(e){
 
     const task = e.target.closest('.task');

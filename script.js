@@ -114,7 +114,7 @@ function changecss(){
     addlist.style.justifyContent = "center";
     addlist.style.alignItems = "center";
     addlist.style.position = "relative";
-    addlist.style.top = "9vh";
+    addlist.style.top = "2vh";
     addlist.style.left = "2vh";
     addlist.style.height = "10vh";
     addlist.style.width = "45vw";
@@ -216,5 +216,8 @@ addEventListener("click",function(e){
     }
 },100);
 
-
+// remove the all list 
+function removelist(){
+    listitems.innerHTML = `<!-- all one one items are store  -->` ;
+}
 // the last comment of the to do list  

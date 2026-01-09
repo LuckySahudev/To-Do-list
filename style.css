@@ -13,6 +13,17 @@
       cursor: pointer;
     }
 
+#cut{
+    width: 5vh;
+    background-color: rgb(77, 76, 76);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 49vw;
+    bottom: 30px;
+}
 header{
     background-color: rgb(124, 123, 123);
     color :white;

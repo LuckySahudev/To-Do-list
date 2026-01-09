@@ -1,0 +1,33 @@
+<!-- 1. when i click plus icon or edit icon so cursor will jump to the input text box -->
+<!-- 2. when i click enter so automatical prass the add button  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>ToDo-List</h2></header>
+    <main>
+        <div class="box">
+            <div class="cbox">
+                <!-- all list are store  -->
+                <div id="container">
+                    <div id = "listitems"> <!-- all one one items are store  --> </div>
+                    <div id ="addlist">
+                        <input id="Input" type="text"> 
+                        <button id="submit" onclick="closeWindow()"><h6>Add</h6></button>
+                    </div>
+                </div>
+                <div id="add" onclick="openWindow()" > <h2>+</h2></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

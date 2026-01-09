@@ -6,6 +6,9 @@ let addlist = document.getElementById("addlist")
 let submit = document.getElementById("submit")
 let listitems = document.getElementById("listitems")
 
+// to check the window is closed or open 
+let check = false;
+
 // open window function open input window
 function openWindow() {
     changecss();
@@ -98,11 +101,13 @@ function closeWindow() {
   
   // displaying none to the input window 
   document.getElementById("addlist").style.display = "none";
+  check = false;
   return;
 }
 
 // Funtion for change the input window display 
 function changecss(){
+    check = true;
     document.getElementById("addlist").style.display = "block";
     addlist.style.background = "rgb(195, 195, 195)";
     addlist.style.display = "flex";
@@ -115,6 +120,9 @@ function changecss(){
     addlist.style.width = "45vw";
     addlist.style.border = "1px solid black";
     addlist.style.borderRadius = "3px";
+
+    // move cusor to the input box 
+    document.getElementById("Input").focus();
 }
 
 // Adding a event listener for + button 
@@ -157,6 +165,7 @@ addEventListener('click', function (e) {
     editingLabel = label;
     changecss();
     document.getElementById("Input").value = label.textContent.trim();
+
 });
 
 // If Checked then disipear the task 
@@ -187,5 +196,25 @@ addEventListener("click",function(e){
     
 
 });
+
+// when Enter is presed call to closewindow 
+function handleEnter(event){
+    if(event.key === "Enter"){
+        closeWindow();
+    }
+}
+
+// when input window is open and i click on outside form the window so window will close
+addEventListener("click",function(e){
+    const tempaddlist = e.target.closest('#addlist');
+    let Input = addlist.querySelector("#Input");
+    if(!tempaddlist && check == true){
+        // to resolve editing problem
+        editingLabel = null;
+        Input.value = "";
+        document.getElementById("addlist").style.display = "none";
+    }
+},100);
+
 
 // the last comment of the to do list  

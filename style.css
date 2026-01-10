@@ -2,17 +2,16 @@
     margin: 0;
     padding: 0;
 }
-
-.box {
-      width: 150px;
-      height: 100px;
-      background: lightblue;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
+.box{
+    border-radius: 5px;
+    height: 80vh;
+    width: 70vw;
+    background: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://thumbs.dreamstime.com/b/white-background-closeup-dahlia-flower-grayscale-minimalistic-style-color-palette-banner-desig-illustration-design-363328776.jpg");
+}
 #cut{
     width: 5vh;
     background-color: rgb(77, 76, 76);
@@ -25,7 +24,7 @@
     bottom: 30px;
 }
 header{
-    background-color: rgb(124, 123, 123);
+    background-color: rgb(56, 55, 55);
     color :white;
     display: flex;
     justify-content: center;
@@ -33,22 +32,14 @@ header{
     height: 10vh;
     width: 100%;
 }
-main{
+main{   
     height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.box{
-    border-radius: 5px;
-    height: 80vh;
-    width: 70vw;
-    background: #e7e7e7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .cbox{
     display: flex;
     justify-content: center;
@@ -58,6 +49,7 @@ main{
     background: white;
     height:70vh ;
     width: 60vw;
+    
 }
 #container{
     display: block;
@@ -149,6 +141,6 @@ input{
     align-items: center;
 }
 footer{
-    background-color: rgb(168, 166, 166);
+    background-color: rgb(56, 55, 55);
     height: 10vh;
 }

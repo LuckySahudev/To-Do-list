@@ -1,1 +1,1 @@
-2. make a x button to cut all the list <br>
+

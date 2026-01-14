@@ -13,7 +13,8 @@
     background-image: url("https://thumbs.dreamstime.com/b/white-background-closeup-dahlia-flower-grayscale-minimalistic-style-color-palette-banner-desig-illustration-design-363328776.jpg");
 }
 #cut{
-    width: 5vh;
+    height: 3vh;
+    width: 3vh;
     background-color: rgb(77, 76, 76);
     color: white;
     display: flex;
@@ -124,19 +125,20 @@ input{
     width: 35vw;
 }
 #submit{
+    height: 22px;
     margin: 4px;
     padding: 3px 4px;
 }
 #add{
+    padding: 3px;
     position: relative;
     top: 25vh;
     left: 10px;
-    border-radius: 3px;
-    background-color: rgb(138, 137, 137);
     color: white;
-    height: 30px;
-    width: 30px;
-    display: flex;
+    display: inline-flex;
+    height: 233vh;
+    border: none;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }

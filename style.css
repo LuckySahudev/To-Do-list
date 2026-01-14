@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -19,10 +20,6 @@
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 49vw;
-    bottom: 30px;
 }
 header{
     background-color: rgb(56, 55, 55);
@@ -57,7 +54,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 60vh;
-    width: 50vw;
+    width: 50vw ;
 }
 label{
     padding: 2px 0px;
@@ -67,32 +64,65 @@ label{
     color: gray;
 }
 #listitems{
-    padding: 5px 10px;
+    background: rgb(246, 244, 244);
+    padding: 5px;
     border:  1px solid black;
-    border-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     overflow-y: auto;
     height: 40vh;
-    width: 50vw;
+    width: 50vw - 8px;
     overflow: none;
 }
 input[type="checkbox"] {
   accent-color: rgb(63, 57, 57);
+  min-height: 3vh;
+  min-width: 3vh;
+  margin-right: 5px;
+}
+.listhead{
+    width: 50vw;
+    margin: 0px;
+    height: 6vh;
+    background: rgb(73, 73, 73);
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    border: solid black 1px;
+}
+.listhead h4{
+    width: 47vw;
+}
+.item{
+    background: white;
+    border: 1px solid black;
+    margin-top: 2px;
+    border-radius: 2px;
+    color: rgb(52, 50, 50);
+    font-family: "Roboto", sans-serif;
+    max-height: 5vh;
+    min-width: 4vh;
 }
 
 .span1{
     display: inline-block;
     width: 40vw;
     padding: 0px 2px;
+    font-size: 3.5vh;
+    font-family: "Lato", sans-serif;
 }
 .task{
     width: 30px;
     text-align: center;
 }
 .action{
+    padding: 4px;
     display: inline-flex;
     gap: 3px;
     margin-left: auto;
-    float: right;                 /* pushes buttons to right without flexing span */
+    float: right;                /* pushes buttons to right without flexing span */
   }
 .delete{
     display: flex;            
@@ -101,8 +131,12 @@ input[type="checkbox"] {
     margin: 0px 2px;
     position: relative;
     overflow: hidden;
-    height: 12px;   
-    width: 12px;
+    height: 18px;   
+    width: 18px;
+    min-height: 3vh;
+    min-width: 3vh;
+    max-width: 3vh;
+    max-height: 3vh;
 }
 .edits{
     display: flex;            
@@ -111,11 +145,16 @@ input[type="checkbox"] {
     margin: 0px 2px;
     position: relative;
     overflow: hidden;
-    height: 12px;   
-    width: 12px;
+    height: 18px;   
+    width: 18px;
+    min-height: 3vh;
+    min-width: 3vh;
+    max-width: 3vh;
+    max-height: 3vh;
 }
 
 .change img{
+    min-width: 2.5vh;
     height: 100%;
 }
 #addlist{
@@ -135,12 +174,18 @@ input{
     top: 25vh;
     left: 10px;
     color: white;
+    background-color: gray;
     display: inline-flex;
-    height: 233vh;
+    height: 45px;
+    width: 45px;
+    max-height: 8vh;
+    max-width: 8vh;
     border: none;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
 }
 footer{
     background-color: rgb(56, 55, 55);

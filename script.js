@@ -129,15 +129,17 @@ function changecss(){
 // Adding a event listener for + button 
 add.addEventListener("click",function(){
     add.style.background = "grey";
-    add.style.height = "35px"
-    add.style.width = "35px"
-    add.innerHTML = "<h1>+</h1>"
+    add.style.height = "50px"
+    add.style.width = "50px"
+    add.innerHTML = "+"
+    add.style.fontSize = "30px"
 
     // this is for + buttun 
     setTimeout(function(){
-        add.innerHTML = "<h2>+</h2>";
-        add.style.height = "30px"
-        add.style.width = "30px"
+        add.innerHTML = "+";
+        add.style.height = "45px"
+        add.style.width = "45px"
+        add.style.fontSize = "25px"
     },100)
 })
 add.addEventListener("mouseleave",function(){

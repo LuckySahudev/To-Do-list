@@ -13,8 +13,12 @@
             <div class="cbox">
                 <!-- all list are store  -->
                 <div id="container">
-                    <div id = "listitems"> <!-- all one one items are store  --> </div>
-                    <button id="cut" onclick="removelist()"> x </button>
+                    <div class="listhead">
+                            <h4>Today tasks</h4>
+                            <button id="cut" onclick="removelist()"> x </button>
+                        </div>
+                    <div id = "listitems"> 
+                    </div>
                     <div id ="addlist">
                         <input id="Input" type="text" placeholder="Add task here" onkeydown="handleEnter(event)" > 
                         <button id="submit" onclick="closeWindow()"><h6>Add</h6></button>

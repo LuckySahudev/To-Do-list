@@ -105,8 +105,7 @@ input[type="checkbox"] {
     align-items: center;
     background: white;
     border: 1px solid black;
-    
-    margin: 1px 1vh 1px 1vh ;
+    margin: 1px 0vh 1px 0.6vh ;
     border-radius: 2px;
     color: rgb(52, 50, 50);
     font-family: "Roboto", sans-serif;

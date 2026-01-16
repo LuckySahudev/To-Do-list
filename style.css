@@ -168,16 +168,22 @@ input[type="checkbox"] {
 #addlist{
     display: none;
 }
+
 #addlist input{
-    height: 4vh;
-}
-input{
     width: 35vw;
+    height: 22px;
+    padding: 4px;
+    max-height: 3vh;
+
 }
 #submit{
-    height: 22px;
-    margin: 4px;
-    padding: 3px 4px;
+    font-weight: bolder;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 5px;
+    align-items: center;
+    padding: 4px;
+    max-height: 6vh;
 }
 #add{
     padding: 3px;

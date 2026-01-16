@@ -121,7 +121,6 @@ function changecss(){
     addlist.style.border = "1px solid black";
     addlist.style.borderRadius = "3px";
     
-    addlist.querySelector("#Input").style.height = "20px";
     // move cusor to the input box 
     document.getElementById("Input").focus();
 }

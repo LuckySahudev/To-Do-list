@@ -20,6 +20,7 @@ const NoteWin = () => {
     setNote('');
   }
 
+
   return (
     <form className='text-white h-1/2 lg:h-full   bg-black  flex flex-col lg:w-1/2 p-7 gap-5 '
     onSubmit={(e)=>{

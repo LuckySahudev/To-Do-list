@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
 
-const NoteWin = () => {
+const NoteWin = ({notes,setNotes}) => {
 
   const [title , setTitle] = useState('');
   const [note , setNote] = useState('')
 
-  const [notes , setNotes] = useState([]);
 
   function formSubmit(e){
     e.preventDefault();
+    
+    if(title === '' || note === ''){
+      console.log("Please Enter a Valid note");
+      return;
+    }
 
-    let newNote = [...notes];
-    newNote.push({"title":{title},"note":{note}});
-    setNotes(newNote);
-    console.log(newNote);
+    let newNotes = [...notes];
+    newNotes.push({title,note});
+    setNotes(newNotes);
 
 
     setTitle('');
@@ -53,7 +56,7 @@ const NoteWin = () => {
 
         <input 
         type="submit"
-        className=' bg-blue-800 border-2 py-2 px-3 rounded-lg'
+        className=' bg-blue-800 border-2 py-2 px-3 rounded-lg active:scale-99'
          />
         
 
